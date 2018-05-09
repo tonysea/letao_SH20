@@ -5,8 +5,8 @@
   <title>用户管理</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
-  <link rel="stylesheet" href="lib/nprogress/nprogress.css">
-    <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+   <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
     <div class="aside">
@@ -22,7 +22,7 @@
    	    <div class='nav'>  	    	
    	    	<ul>
    	    		<li>
-	   	    		<a href="user.html" class='current'>
+	   	    		<a href="user.html" >
 	   	    			<i class="glyphicon glyphicon-user"></i>
 	   	    			<span>用户管理</span>
 	   	    		</a>
@@ -32,13 +32,13 @@
 	   	    			<i class="glyphicon glyphicon-list"></i>
 	   	    			<span>分类管理</span>
 	   	    		</a>
-	   	    		<div class='options' style="display: none">
-	   	    			<a href="first.html">一级分类</a>
+	   	    		<div class='options'>
+	   	    			<a href="first.html" class='current'>一级分类</a>
 	   	    			<a href="second.html">二级分类</a>
 	   	    		</div>
    	    		</li>
    	    		<li>
-	   	    		<a href="product.html" class="current">
+	   	    		<a href="product.html" >
 	   	    			<i class="glyphicon glyphicon-tags"></i>
 	   	    			<span>商品管理</span>
 	   	    		</a>
@@ -52,39 +52,19 @@
 	   	   <a href="#" class='pull-left menu'>
 	   	    <i class='glyphicon glyphicon-align-justify' ></i>
 	   	   </a>
-	   	   <a href="#" class='pull-right out'>
+	   	   <a href="#" class='pull-right'>
 	   	     <i class="glyphicon glyphicon-log-out"></i>
 	   	   </a>
    	  </div>
       <!-- container-fluid 撑满父容器, 会自动宽度100%, 会自己添加一个 15px内边距 -->
    	  <div class="container-fluid">
 	   	  	<ol class="breadcrumb">
-			  <li><a href="#">管理系统</a></li>
-			  <li class="active">首页</li>
+        <li><a href="#">管理系统</a></li>
+			  <li><a href="#">分类管理</a></li>
+			  <li class="active">一级分类</li>
 			</ol>
-	   </div>
+	   	  </div>
     </div>
-
-   <div class="modal fade" id='logoutModal'>
-	  <div class="modal-dialog modal-sm" >
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" a><span>&times;</span></button>
-	        <h4 class="modal-title">温馨提示</h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>您确定要退出后台管理系统吗？</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-	        <button type="button" class="btn btn-primary" id='logoutBtn'>退出</button>
-	      </div>
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
-
-
-
 <script src='./lib/jquery/jquery.min.js'></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
