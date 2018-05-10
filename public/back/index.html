@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
-    <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
     <div class="aside">
@@ -22,7 +22,7 @@
    	    <div class='nav'>  	    	
    	    	<ul>
    	    		<li>
-	   	    		<a href="user.html" class='current'>
+	   	    		<a href="user.html">
 	   	    			<i class="glyphicon glyphicon-user"></i>
 	   	    			<span>用户管理</span>
 	   	    		</a>
@@ -38,7 +38,7 @@
 	   	    		</div>
    	    		</li>
    	    		<li>
-	   	    		<a href="product.html" class="current">
+	   	    		<a href="product.html">
 	   	    			<i class="glyphicon glyphicon-tags"></i>
 	   	    			<span>商品管理</span>
 	   	    		</a>
@@ -63,6 +63,10 @@
 			  <li class="active">首页</li>
 			</ol>
 	   </div>
+	   <div class="content">
+    	<div class='con-bar pull-left' id='con_bar'></div>
+    	<div class='con-pie pull-right' id="con_pie"></div>
+       </div>
     </div>
 
    <div class="modal fade" id='logoutModal'>
@@ -83,12 +87,16 @@
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
 
-
-
+   
+    	
+    
 <script src='./lib/jquery/jquery.min.js'></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src='lib/nprogress/nprogress.js'></script>
+<script src='lib/echarts/echarts.min.js'></script>
 <script src='js/common.js'></script>
+<script src='js/index.js'></script>
+
 </body>
 </html>
