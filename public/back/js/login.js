@@ -1,7 +1,7 @@
 $(function(){
 
 	$('#form').bootstrapValidator({
-        
+        // 验证字体X
         feedbackIcons: {
 			valid: 'glyphicon glyphicon-ok',
 			invalid: 'glyphicon glyphicon-remove',

@@ -6,7 +6,7 @@ if(location.href.indexOf('login.html') === -1){
 		type:'get',
 		url:"/employee/checkRootLogin",
 		success:function(info){
-              console.log(info);
+              // console.log(info);
               if(info.error === 400){
               	location.href='login.html';
               }
@@ -15,14 +15,16 @@ if(location.href.indexOf('login.html') === -1){
 }
 
 
-// 禁用进度条
+// 禁用进度条圆圈
 NProgress.configure({ showSpinner: false });
 // ajaxStart  第一个ajax开始发送的时候调用
 //  ajaxStop   最后一个ajax结束时调用
 $(document).ajaxStart(function(){
 	NProgress.start();
+	// console.log(1);
 });
 $(document).ajaxStop(function(){
+	// console.log(2);
 	setTimeout(function(){
 		NProgress.done();
 	},500)
