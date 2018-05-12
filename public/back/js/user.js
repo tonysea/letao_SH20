@@ -47,7 +47,7 @@ $(function(){
            // isDelete取反btn-danger本为1
            var isDelete = $(this).hasClass('btn-danger') ? 0 : 1;
            
-           $('#confirm').click(function(){
+           $('#confirm').off().click(function(){
                $.ajax({
                  url:'/user/updateUser',
                  type:'post',

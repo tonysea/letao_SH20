@@ -17,13 +17,13 @@
   <div class="brand">
     <a href="#">黑马20期</a>
   </div>
-  
+
   <!-- 头像 -->
   <div class="user">
     <img src="./images/default.jpg" alt="">
     <p>超级管理员</p>
   </div>
-  
+
   <!-- 导航 -->
   <div class="nav">
     <ul>
@@ -43,7 +43,7 @@
 
 <!-- 乐淘主体 -->
 <div class="lt_main">
-  
+
   <!-- lt_topbar -->
   <div class="lt_topbar">
     <a href="javascript:;" class="pull-left icon_menu">
@@ -53,16 +53,16 @@
       <i class="glyphicon glyphicon-log-out"></i>
     </a>
   </div>
-  
+
   <!-- 希望有一个容器, 可以撑满父容器, 会自动宽度100%, 会自己添加一个 15px内边距 -->
   <div class="container-fluid">
-    
+
     <!-- 路径导航 -->
     <ol class="breadcrumb">
       <li><a href="index.html">管理系统 </a></li>
       <li class="active">用户管理</li>
     </ol>
-    
+
     <div class="lt_content">
       <!-- 表格 table-bordered 加上边框  table-hover 鼠标高亮 -->
       <table class="table table-bordered table-hover">
@@ -79,14 +79,14 @@
         <!-- 挖个坑 -->
         </tbody>
       </table>
-      
-      
+
+
       <div class="text-right">
         <!-- 分页按钮 -->
         <ul id="paginator"></ul>
       </div>
     </div>
-  
+
   </div>
 
 
@@ -115,6 +115,7 @@
 </div>
 
 
+
 <!-- 启用禁用模态框 -->
 <div class="modal fade" id="userModal">
   <div class="modal-dialog modal-sm">
@@ -135,6 +136,7 @@
 </div>
 
 
+
 <!--
   模板引擎使用步骤
   1. 引入模板 js
@@ -145,26 +147,27 @@
 
 <script type="text/html" id="tpl">
   {{ each rows v i }}
-  <tr>
-    <!-- 在当前页多少条的基础上, 还要加上前面有多少条 -->
-    <td> {{ i + 1 + (page-1) * size }}</td>
-    <td> {{ v.username }}</td>
-    <td> {{ v.mobile }}</td>
-    <!-- isDelete 1正常 0禁用 -->
-    <td>{{ v.isDelete === 1 ? "正常" : "禁用" }}</td>
-    <td data-id="{{ v.id }}">
-      <!-- 说明正常状态, 显示禁用 -->
-      {{ if v.isDelete === 1 }}
-      <button class="btn btn-danger">禁用</button>
-      {{ /if }}
-      
-      {{ if v.isDelete === 0 }}
-      <button class="btn btn-success">启用</button>
-      {{ /if }}
-    </td>
-  </tr>
+    <tr>
+      <!-- 在当前页多少条的基础上, 还要加上前面有多少条 -->
+      <td> {{ i + 1 + (page-1) * size }} </td>
+      <td> {{ v.username }}</td>
+      <td> {{ v.mobile }}</td>
+      <!-- isDelete 1正常 0禁用 -->
+      <td>{{ v.isDelete === 1 ? "正常" : "禁用" }}</td>
+      <td data-id="{{ v.id }}">
+        <!-- 说明正常状态, 显示禁用 -->
+        {{ if v.isDelete === 1 }}
+          <button class="btn btn-danger" >禁用</button>
+        {{ /if }}
+
+        {{ if v.isDelete === 0 }}
+          <button class="btn btn-success">启用</button>
+        {{ /if }}
+      </td>
+    </tr>
   {{ /each }}
 </script>
+
 
 
 <script src="./lib/jquery/jquery.min.js"></script>

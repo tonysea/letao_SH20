@@ -9,86 +9,188 @@
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
 </head>
 <body>
-    <div class="aside">
-   	    <div class="aside_top">
-   	      <a href="#">黑马20期</a>
-   	    </div>
-   	    <!-- 头像 -->
-   	    <div class="user">
-   	    	<img src='images/cc.jpg' alt="">
-   	    	<p>管理员</p>
-   	    </div>
-   	    <!-- 导航 -->
-   	    <div class='nav'>  	    	
-   	    	<ul>
-   	    		<li class='current'>
-	   	    		<a href="user.html">
-	   	    			<i class="glyphicon glyphicon-user"></i>
-	   	    			<span>用户管理</span>
-	   	    		</a>
-   	    		</li>
-   	    		<li>
-	   	    		<a href="javascript:;"  class='list'>
-	   	    			<i class="glyphicon glyphicon-list"></i>
-	   	    			<span>分类管理</span>
-	   	    		</a>
-	   	    		<div class='options'>
-	   	    			<a href="first.html">一级分类</a>
-	   	    			<a href="second.html" class='current'>二级分类</a>
-	   	    		</div>
-   	    		</li>
-   	    		<li>
-	   	    		<a href="product.html">
-	   	    			<i class="glyphicon glyphicon-tags"></i>
-	   	    			<span>商品管理</span>
-	   	    		</a>
-   	    		</li>
-   	    	</ul>
+<div class="aside">
+  <div class="aside_top">
+    <a href="#">黑马20期</a>
+  </div>
+  <!-- 头像 -->
+  <div class="user">
+    <img src='images/cc.jpg' alt="">
+    <p>管理员</p>
+  </div>
+  <!-- 导航 -->
+  <div class='nav'>
+    <ul>
+      <li class='current'>
+        <a href="user.html">
+          <i class="glyphicon glyphicon-user"></i>
+          <span>用户管理</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" class='list'>
+          <i class="glyphicon glyphicon-list"></i>
+          <span>分类管理</span>
+        </a>
+        <div class='options'>
+          <a href="first.html">一级分类</a>
+          <a href="second.html" class='current'>二级分类</a>
         </div>
+      </li>
+      <li>
+        <a href="">
+          <i class="glyphicon glyphicon-tags"></i>
+          <span>商品管理</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- 主体 -->
+<div class='main'>
+  <div class="main-top">
+    <a href="#" class='pull-left menu'>
+      <i class='glyphicon glyphicon-align-justify'></i>
+    </a>
+    <a href="#" class='pull-right out'>
+      <i class="glyphicon glyphicon-log-out"></i>
+    </a>
+  </div>
+  <!-- container-fluid 撑满父容器, 会自动宽度100%, 会自己添加一个 15px内边距 -->
+  <div class="container-fluid">
+    <ol class="breadcrumb">
+      <li><a href="#">管理系统</a></li>
+      <li class="active">分类管理</li>
+      <li class="active">一级分类</li>
+    </ol>
+    
+    <!--添加按钮-->
+    <button type="button" class="btn  btn-default mb_20 " id='addBtn'>添加分类</button>
+    
+    <table class='table table-bordered table-hover'>
+      <thead>
+      <th width='10%'>序号</th>
+      <th width='30%'>一级分类名</th>
+      <th width='30%'>二级分类名称</th>
+      <th width='30%'>二级分类LOGO</th>
+      </thead>
+      <tbody>
+      <tr>
+        <td>11</td>
+        <td>222</td>
+        <td>222</td>
+        <td>222</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class='content text-right'>
+      <ul id='paginator'></ul>
     </div>
-    <!-- 主体 -->
-    <div class='main'>
-   	  <div class="main-top">
-	   	   <a href="#" class='pull-left menu'>
-	   	    <i class='glyphicon glyphicon-align-justify' ></i>
-	   	   </a>
-	   	   <a href="#" class='pull-right out'>
-	   	     <i class="glyphicon glyphicon-log-out"></i>
-	   	   </a>
-   	  </div>
-      <!-- container-fluid 撑满父容器, 会自动宽度100%, 会自己添加一个 15px内边距 -->
-   	  <div class="container-fluid">
-	   	  	<ol class="breadcrumb">
-			  <li><a href="#">管理系统</a></li>
-			  <li class="active">首页</li>
-			</ol>
-	   </div>
+  </div>
+</div>
+
+
+<!--退出的模态框-->
+<div class="modal fade" id='logoutModal'>
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" a><span>&times;</span></button>
+        <h4 class="modal-title">温馨提示</h4>
+      </div>
+      <div class="modal-body">
+        <p>您确定要退出后台管理系统吗？</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id='logoutBtn'>退出</button>
+      </div>
     </div>
-
-   <div class="modal fade" id='logoutModal'>
-	  <div class="modal-dialog modal-sm" >
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" a><span>&times;</span></button>
-	        <h4 class="modal-title">温馨提示</h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>您确定要退出后台管理系统吗？</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-	        <button type="button" class="btn btn-primary" id='logoutBtn'>退出</button>
-	      </div>
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+  </div>
+</div>
 
 
+<!--添加二级分类-->
+<div class="modal fade" id="addModal">
+  <div class="modal-dialog modal-sm">
+    <form id="form">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          <h4 class="modal-title">添加分类</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group has-feedback">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle " type="button" id="dropdownMenu1" data-toggle="dropdown" >
+                <span class='dropdown-text'>请选择一级分类</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <!--<li><a href="#">Action</a></li>-->
+              </ul>
+              <input type="hidden" name='categoryId' class='categoryId'>
+            </div>
+          </div>
+          <div class="form-group has-feedback">
+            <div class="form-group">
+              <!--<label for="exampleInputEmail1">Email address</label>-->
+              <input type="text" name='brandName' class="form-control" placeholder="请输入二级分类">
+            </div>
+          </div>
+          <div class="form-group has-feedback">
+            <div class="form-group">
+              <!--添加btn btn-default样式变成按钮样式 label关联到file表单-->
+              <label for="fileupload" class='btn btn-default'>上传图片</label>
+              <input id="fileupload" type="file" name="pic1" data-url="/category/addSecondCategoryPic" style='display:none;' >
+            </div>
+          </div>
+          
+          <div class="form-group" id="imgBox">
+            <img src="images/hh.jpg" width='100' alt="">
+            <input type="hidden" name='brandLogo' id='brandLogo'>
+            <input type="hidden" name='hot' value='1'>
+          </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <!--在后期使用ajax提交时要清除默认的submit提交-->
+          <button type="submit" class="btn btn-primary">添加</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script type='text/html' id='secondTpl'>
+  {{each rows v i}}
+  <tr>
+    <td>{{i+1+(page-1)*size}}</td>
+    <td>{{v.categoryName}}</td>
+    <td>{{v.brandName}}</td>
+    <td><img src="{{v.brandLogo}}" width='80' alt=""></td>
+  </tr>
+  {{/each}}
+</script>
+
+<script type='text/html' id='listTpl'>
+  {{each rows v i}}
+     <li class='ulList' data-id='{{v.id}}' ><a href="#">{{v.categoryName}}</a></li>
+  {{/each}}
+</script>
 
 <script src='./lib/jquery/jquery.min.js'></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src='lib/nprogress/nprogress.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='lib/bootstrap-paginator/bootstrap-paginator.min.js'></script>
+<script src='lib/jquery-fileupload/jquery.ui.widget.js'></script>
+<script src='lib/jquery-fileupload/jquery.fileupload.js'></script>
 <script src='js/common.js'></script>
+<script src="js/second.js"></script>
+
+
 </body>
 </html>
