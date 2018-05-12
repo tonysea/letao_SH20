@@ -108,7 +108,7 @@ a:active {
 /*主体*/
 .main {
    min-height: 1000px;
-   background-color: pink;
+   /*background-color: pink;*/
    padding-left: 180px;
    padding-top: 70px;
    transition: all 1s;
