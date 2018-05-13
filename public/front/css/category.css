@@ -1,0 +1,51 @@
+.main {
+  height: 100%;
+  padding-left: 120px;
+  background-color: #fff;
+  position: relative;
+}
+.aside {
+  height: 100%;
+  width: 120px;
+  position: absolute;
+  left: 0;
+}
+.aside li a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #E3E4E5;
+}
+.aside li a.active {
+  background-color: #fff;
+  border-right: none;
+}
+
+.banner {
+  /*width: 100%;*/
+  height: 100%;
+  position: absolute;
+  right: 0;
+  /*mui内置设置成left:0*/
+  left: 120px;
+  overflow: hidden;
+  
+}
+.banner li {
+  float: left;
+  width: 33.333%;
+}
+.banner li a {
+  display: block;
+}
+.banner li a p {
+  text-align:center;
+}
+.banner li img {
+  width: 70px;
+  height: 50px;
+  margin: 0 auto;
+}
